@@ -1,0 +1,6 @@
+datetime
+fastapi
+loguru
+pymongo
+python-dateutil
+uvicorn

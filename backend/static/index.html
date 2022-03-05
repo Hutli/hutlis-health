@@ -1,0 +1,117 @@
+<meta charset="utf8" />
+
+<script src="/static/index.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<link rel="stylesheet" href="/static/fonts.css" />
+<link rel="stylesheet" href="/static/fa.min.css" />
+<link rel="stylesheet" href="/static/index.css" />
+
+<div>
+  <div id="water_today" class="ProgressBar" data-progress="0">
+    <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+      <!-- on défini le l'angle et le centre de rotation du cercle -->
+      <circle
+        transform="rotate(-90, 100, 100)"
+        class="ProgressBar-background"
+        cx="100"
+        cy="100"
+        r="95"
+      />
+      <circle
+        transform="rotate(-90, 100, 100)"
+        class="water-circle ProgressBar-circle"
+        cx="100"
+        cy="100"
+        r="95"
+      />
+    </svg>
+    <span id="water-count" class="ProgressBar-percentage"></span>
+  </div>
+  <div class="container">
+    <div>
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <div class="countdown">
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="22.5em"
+      height="22.5em"
+      viewBox="0 0 200 200"
+      enable-background="new 0 0 200 200"
+      xml:space="preserve"
+      class="svg-loader"
+    >
+      <g>
+        <!-- Gray circle under the second countdown circle -->
+        <circle
+          fill="none"
+          cx="6.25em"
+          cy="6.25em"
+          r="5em"
+          class="panodil-circle gray"
+          transform="scale(.8, .8) translate(25 25)"
+        />
+        <!-- Second countdown circle -->
+        <circle
+          id="seconds_circle"
+          fill="none"
+          cx="6.25em"
+          cy="6.25em"
+          r="5em"
+          class="svg-loader_grow panodil-circle"
+          role="progressbar"
+          transform="rotate(-89 100 100) scale(.8, .8) translate(25 25)"
+        />
+        <!-- Second countdown text -->
+        <text
+          id="second_text"
+          text-align="center"
+          x="1.3em"
+          y="2.4em"
+          font-family="'Open Sans', Verdana"
+          font-size="3em"
+          fill="#fff"
+        ></text>
+        <text
+          id="second_text"
+          text-align="center"
+          x="2.5em"
+          y="4.7em"
+          font-family="'Open Sans', Verdana"
+          font-size="2em"
+          fill="#fff"
+        >
+          💊
+        </text>
+        <!-- Minute countdown text -->
+        <text
+          id="minute_text"
+          text-align="center"
+          x="5.5em"
+          y="4em"
+          font-family="'Open Sans', Verdana"
+          font-size="1em"
+          fill="#fff"
+        ></text>
+        <!-- Minute countdown circle -->
+        <circle
+          id="minutes_circle"
+          fill="none"
+          cx="6.25em"
+          cy="6.25em"
+          r="5em"
+          class="svg-loader_grow panodil-circle"
+          role="progressbar"
+          transform="rotate(-89 100 100) translate(0 200) scale(1, -1)"
+        />
+      </g>
+    </svg>
+  </div>
+</div>

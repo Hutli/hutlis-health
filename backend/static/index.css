@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body {
+  background-color: #1b1a1a;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.ProgressBar {
+  margin: 20px auto 20px auto;
+  height: calc(100vw - 200px);
+  width: calc(100vw - 200px);
+  max-width: 800px;
+  max-height: 800px;
+  position: relative;
+}
+
+.ProgressBar-circle,
+.ProgressBar-background {
+  fill: none;
+  stroke: #d00463;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.ProgressBar-background {
+  stroke: white;
+  stroke-width: 4;
+  z-index: 0;
+}
+
+.ProgressBar-percentage {
+  position: absolute;
+  color: #389ba6;
+  font-size: 13vw;
+  text-align: center;
+  width: 100%;
+  display: block;
+  white-space: pre;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.p {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 140px;
+}
+
+@media (min-width: 1000px) {
+  .ProgressBar-percentage {
+    font-size: 160px;
+  }
+}
+
+/* COUNTDOWN */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Body
+# SVG
+# Timer Options ("- 25 +")
+# Button
+--------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,300);
+
+/*--------------------------------------------------------------
+ # Body
+--------------------------------------------------------------*/
+.countdown {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #444;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+ # SVG
+--------------------------------------------------------------*/
+
+.svg-loader {
+  position: relative;
+  height: calc(100vw - 200px);
+  width: calc(100vw - 200px);
+  max-width: 800px;
+  max-height: 800px;
+}
+.svg-loader_grow {
+  stroke-miterlimit: 10;
+  stroke-dasharray: 500;
+  stroke-dashoffset: -500;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.panodil-circle {
+  stroke-width: 6;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+  stroke: #00fffc;
+}
+
+circle.gray {
+  stroke: #444;
+}
+
+/*--------------------------------------------------------------
+ # Timer Options ("- 25 +")
+--------------------------------------------------------------*/
+
+#minuteCount {
+  display: block;
+  line-height: 0.5em;
+  vertical-align: middle;
+  padding: 0.3em;
+}
+
+#minuteCount span {
+  font-size: 0.3em;
+  font-weight: 300;
+}
+
+#minuteCount i {
+  font-style: normal;
+}

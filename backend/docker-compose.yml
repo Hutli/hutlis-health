@@ -1,0 +1,11 @@
+version: "3"
+services:
+  inviter_backend:
+    container_name: inviter_backend
+    build: .
+    environment:
+      BACKEND_PORT: 43417
+      MONGO_CONNECTION_STRING: localhost
+    volumes:
+      - "./:/app"
+    network_mode: host
